@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+}
+body{
+    padding: 10px;
+}
+main{
+    
+    width: 100%;
+    height: 100%;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    'titulo titulo titulo'
+    'partes1 partes1 partes3'
+    'partes2 partes2 partes3'
+    ;
+    grid-template-rows: 1fr repeat(2,2fr);
+    grid-template-columns: 2fr 2fr 1fr;
+}
+.container_titulo{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+.parte1{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    grid-area:partes1 ;
+}
+.parte2{
+    
+    display: grid;
+    justify-items: center;
+    grid-area: partes2;
+}
+.opciones{
+ display: grid;
+ justify-items: center;
+}
+input[type=text]{
+    width: 40%;
+    height: 35px;
+    font-size: 30px;
+    text-align: center;
+}
+.parte3{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: partes3;
+}
+.resultado{
+    width: 150px;
+    height: 50px;
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boton{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.termometro{
+    height: 100px;
+    width: 30px;
+    border: solid 1px;
+    transform: rotate(180deg);
+}
+.termometro_mercurio{
+    height: 100%;
+    width: 100%;
+
+
+    background-color: red;
+}
+@media(max-width:1399px){
+  
+    .container{
+        height: 100%;
+        width: 100%;
+        border: 1px solid;
+  
+
+    }
+    .container_titulo{
+        font-size: 30px;
+    }
+    input[type=text]{
+    width:50% ;
+    }
+
+}
