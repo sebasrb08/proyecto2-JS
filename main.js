@@ -28,8 +28,11 @@ boton.addEventListener('click',()=>{
     }
     if(relleno>100){
         mercurio.style.height=`100%`
-    }else if(relleno<100){
+    }else if(relleno<=100 && relleno>0){
         mercurio.style.height=`${relleno}%`
-    }
+    
+     }else {
+        mercurio.style.height='0'
+     }
     
 })
